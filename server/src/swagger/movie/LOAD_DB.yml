@@ -1,0 +1,14 @@
+Return all movies
+---
+tags:
+  - movie
+responses:
+  200:
+    description: Load the full database
+    schema:
+      example:
+        movie:
+          title: 2001 A Space Odyssey
+          director: Stanley Kubrick
+          date: 1968
+          genre: Science Fiction
