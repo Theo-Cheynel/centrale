@@ -7,6 +7,10 @@ parameters:
     in: path
     type: string
     description: the title of the movie
+  - name: director
+    in: path
+    type: string
+    description: the name of the director of the movie
 responses:
   200:
     description: The movie's information were successfully retrieved

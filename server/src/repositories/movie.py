@@ -5,6 +5,10 @@ class MovieRepository:
     """ The repository for the movie model """
 
     @staticmethod
+    def get_all():
+
+        return Movie.query.all()
+
     def get(title, director):
 
         return Movie.query.filter_by(title = title, director=director).one()
