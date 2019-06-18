@@ -2,10 +2,9 @@ Return all movies
 ---
 tags:
   - movie
-parameters:
 responses:
   200:
-    description: The movie's information were successfully retrieved
+    description: All movies were successfully retrieved
     schema:
       example:
         movie:
