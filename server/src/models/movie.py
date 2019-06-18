@@ -20,3 +20,4 @@ class Movie(db.Model, BaseModel, metaclass=MetaBaseModel):
         self.title = title
         self.director = director
         self.date = date
+
