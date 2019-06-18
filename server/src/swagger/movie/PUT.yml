@@ -19,6 +19,9 @@ parameters:
         date:
           type: integer
           description: The date of the movie
+        rating:
+          type: float
+          description: The rating of the movie
 responses:
   200:
     description: The movie was successfully created
@@ -28,3 +31,4 @@ responses:
           title: 2001 A Space Odyssey
           director: Stanley Kubrick
           date: 1968
+          rating: 4
