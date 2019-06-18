@@ -4,9 +4,9 @@ Defines the blueprint for the ratingd
 from flask import Blueprint
 from flask_restful import Api
 
-from resources import UserResource
+from resources import RateResource
 
 RATE_BLUEPRINT = Blueprint("rate", __name__)
 Api(RATE_BLUEPRINT).add_resource(
-    RateResource, "/user/<integer:user_rating>/<integer:movie_rated>"
+    RateResource, "/rate/<int:user_rating>/<int:movie_rated>"
 )

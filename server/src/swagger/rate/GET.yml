@@ -1,22 +1,22 @@
 Return an user key information based on his name
 ---
 tags:
-  - user
+  - rate
 parameters:
-  - name: last_name
+  - name: movie_rated
     in: path
-    type: string
-    description: the last name of the user
-  - name: first_name
+    type: integer
+    description: the movie rated by the user
+  - name: user_rating
     in: path
-    type: string
-    description: the last name of the user
+    type: integer
+    description: the user rating the movie
 responses:
   200:
-    description: The user's information were successfully retrieved
+    description: the rating has been successfully retrieved
     schema:
       example:
-        user:
-          last_name: Doe
-          first_name: John
-          age: 30
+        rate:
+          movie_rated : 3
+          user_rating: 1
+          rating : 4
