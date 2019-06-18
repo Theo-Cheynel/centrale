@@ -8,5 +8,5 @@ from resources import MovieResource
 
 MOVIE_BLUEPRINT = Blueprint("movie", __name__)
 Api(MOVIE_BLUEPRINT).add_resource(
-    MovieResource, "/movie/<string:title>"
+    MovieResource, "/movie/<string:title>/<string:director>"
 )
