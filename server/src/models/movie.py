@@ -11,7 +11,7 @@ class Movie(db.Model, BaseModel, metaclass=MetaBaseModel):
     __tablename__ = "movie"
 
     title = db.Column(db.String(300), primary_key=True)
-    director = db.Column(db.String(300), primary_key=False)
+    director = db.Column(db.String(300), primary_key=True)
     date = db.Column(db.Integer, nullable=True)
     
 

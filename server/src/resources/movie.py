@@ -16,9 +16,9 @@ class MovieResource(Resource):
 
     @staticmethod
     @swag_from("../swagger/movie/GET.yml")
-    def get(title):
+    def get(title, director):
         """ Return a movie key information based on its title """
-        movie = MovieRepository.get(title = title)
+        movie = MovieRepository.get(title = title, director=director)
         return jsonify({"movie": movie.json})
 
     @staticmethod
