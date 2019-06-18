@@ -26,3 +26,4 @@ class MovieRepository:
 
         movie = Movie(title=title, director=director, date=date)
         return movie.save()
+

@@ -19,9 +19,6 @@ parameters:
         date:
           type: integer
           description: The date of the movie
-        rating:
-          type: float
-          description: The rating of the movie
           
 responses:
   200:
