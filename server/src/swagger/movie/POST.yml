@@ -1,0 +1,30 @@
+Create a movie based on the sent information
+---
+tags:
+  - movie
+parameters:
+  - name: title
+    in: path
+    type: string
+    description: the title of the movie
+  - name: director
+    in: path
+    type: string
+    description: the name of the director of the movie
+  - name: body
+    in: body
+    schema:
+      type: object
+      properties:
+        age:
+          type: integer
+          description: The date of the movie
+responses:
+  200:
+    description: The movie was successfully created
+    schema:
+      example:
+        movie:
+          title: 2001 A Space Odyssey
+          director: Stanley Kubrick
+          date: 1968
