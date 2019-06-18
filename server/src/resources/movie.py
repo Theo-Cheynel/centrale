@@ -30,23 +30,25 @@ class MovieResource(Resource):
 
     @staticmethod
     @parse_params(
-        Argument("date", location="json", required=True, help="The date of the movie.")
+        Argument("date", location="json", required=True, help="The date of the movie."),
+        Argument("rating", location="json", required=True, help="The rating of the movie")
     )
     @swag_from("../swagger/movie/POST.yml")
-    def post(title, director, date):
+    def post(title, director, date, rating):
         """ Create a movie based on the sent information """
         movie = MovieRepository.create(
-            title = title, director = director, date = date
+            title = title, director = director, date = date, rating = rating
         )
         return jsonify({"movie": movie.json})
 
     @staticmethod
     @parse_params(
-        Argument("date", location="json", required=True, help="The date of the movie.")
+        Argument("date", location="json", required=True, help="The date of the movie."),
+        Argument("rating", location="json", required=True, help="The rating of the movie")
     )
     @swag_from("../swagger/movie/PUT.yml")
-    def put(title, director, date):
+    def put(title, director, date, rating):
         """ Update a movie based on the sent information """
         repository = MovieRepository()
-        movie = repository.update(title = title, director = director, date=date)
+        movie = repository.update(title = title, director = director, date=date, rating=rating)
         return jsonify({"movie": movie.json})
