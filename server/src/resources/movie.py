@@ -15,6 +15,13 @@ class MovieResource(Resource):
     """ Verbs relative to the movies """
 
     @staticmethod
+    @swag_from("../swagger/movie/GET_ALL.yml")
+    def get_all():
+        """ Return all movies """
+        movies = MovieRepository.get_all()
+        return jsonify({"movie": movie.json for movie in movies})
+
+    @staticmethod
     @swag_from("../swagger/movie/GET.yml")
     def get(title, director):
         """ Return a movie key information based on its title """
