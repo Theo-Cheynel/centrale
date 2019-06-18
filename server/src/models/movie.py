@@ -13,7 +13,6 @@ class Movie(db.Model, BaseModel, metaclass=MetaBaseModel):
     title = db.Column(db.String(300), primary_key=True)
     director = db.Column(db.String(300), primary_key=True)
     date = db.Column(db.Integer, nullable=True)
-    rating = db.Column(db.Float, nullable=True)
     
 
     def __init__(self, title, director, date=None):
@@ -21,4 +20,4 @@ class Movie(db.Model, BaseModel, metaclass=MetaBaseModel):
         self.title = title
         self.director = director
         self.date = date
-        self.rating = rating
+
