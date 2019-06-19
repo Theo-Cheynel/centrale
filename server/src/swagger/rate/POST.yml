@@ -19,6 +19,9 @@ parameters:
         rating:
           type: integer
           description: The rating of the movie given by the user
+        comment:
+          type: string
+          description: The user's comment on the movie
 responses:
   200:
     description: the movie was successfully rated by the user
@@ -28,5 +31,5 @@ responses:
           movie_rated : 3
           user_rating: 1
           rating : 4
-
+          commentary: "I loved it !"
 

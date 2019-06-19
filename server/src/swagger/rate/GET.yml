@@ -20,3 +20,4 @@ responses:
           movie_rated : 3
           user_rating: 1
           rating : 4
+          comment: "I loved it !"

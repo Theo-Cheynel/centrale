@@ -9,21 +9,29 @@ class MovieRepository:
 
         return Movie.query.all()
 
-    def get(title, director):
+    def get_by_title(title):
+        return Movie.query.filter_by(title=title)
 
-        return Movie.query.filter_by(title = title, director=director).one()
+    def get_by_genre(genre):
+        return Movie.query.filter_by(genre=genre)
 
-    def update(self, title, director, date):
+    def getbykey(key):
+
+        return Movie.query.filter_by(key=key).one()
+
+    def update(self, key, title, director, date, genre):
 
         movie = self.get(title, director)
         movie.date = date
         movie.director= director
+        movie.key=key
+        movie.genre=genre
 
         return movie.save()
 
     @staticmethod
-    def create(title, director, date):
+    def create(key, title, director, date, genre):
 
-        movie = Movie(title=title, director=director, date=date)
+        movie = Movie(key=key, title=title, director=director, date=date, genre=genre)
         return movie.save()
 

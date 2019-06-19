@@ -3,14 +3,10 @@ Create a movie based on the sent information
 tags:
   - movie
 parameters:
-  - name: title
-    in: path
-    type: string
-    description: the title of the movie
-  - name: director
-    in: path
-    type: string
-    description: the name of the director of the movie
+  - name : key
+    in : path
+    type : integer
+    description : the key identifier of the movie
   - name: body
     in: body
     schema:
@@ -19,6 +15,15 @@ parameters:
         date:
           type: integer
           description: The date of the movie
+        title:
+          type: string
+          description : The title of the movie
+        director :
+          type: string
+          description : The name of the movie director
+        genre:
+          type: string
+          description : The genre of the movie
           
 responses:
   200:
@@ -26,7 +31,8 @@ responses:
     schema:
       example:
         movie:
+          key : 1
           title: 2001 A Space Odyssey
           director: Stanley Kubrick
           date: 1968
-          rating : 4
+          genre: Science Fiction

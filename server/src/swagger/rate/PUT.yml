@@ -18,13 +18,17 @@ parameters:
       properties:
         rating:
           type: integer
-          description: The rating of the movie given by the use
+          description: The rating of the movie given by the user
+        comment:
+          type: string
+          description: The user's comment on the movie
 responses:
   200:
-    description: he movie was successfully rated by the user
+    description: The movie was successfully rated by the user
     schema:
       example:
         rate:
           movie_rated : 3
           user_rating: 1
           rating : 4
+          commentary: "I loved it !"
