@@ -9,6 +9,9 @@ class MovieRepository:
 
         return Movie.query.all()
 
+    def get_by_title(title):
+        return Movie.query.filter_by(title=title)
+
     def getbykey(key):
 
         return Movie.query.filter_by(key=key).one()

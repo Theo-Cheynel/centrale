@@ -21,6 +21,9 @@ parameters:
         director :
           type: string
           description : The name of the movie director
+        genre: 
+          type: string
+          description : The genre of the movei
 
 responses:
   200:
@@ -32,3 +35,4 @@ responses:
           director: Stanley Kubrick
           date: 1968
           rating: 4
+          genre: Science Fiction

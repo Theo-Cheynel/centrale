@@ -1,0 +1,15 @@
+Return a movie's average rating
+---
+tags:
+  - movie
+parameters:
+  - name: key
+    in: path
+    type: integer
+    description: The key identifier of the movie
+responses:
+  200:
+    description: The movie's average rating was successfully retrieved
+    schema:
+      example:
+        rating : 3.4

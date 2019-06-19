@@ -1,15 +1,15 @@
-Return a movie key information based on its title
+Return a list of movies for the given genre
 ---
 tags:
   - movie
 parameters:
-  - name: key
+  - name: genre
     in: path
-    type: integer
-    description: The key identifier of the movie
+    type: string
+    description: The genre of the movie
 responses:
   200:
-    description: The movie's information were successfully retrieved
+    description: The movies were successfully retrieved
     schema:
       example:
         movie:
@@ -18,3 +18,4 @@ responses:
           director: Stanley Kubrick
           date: 1968
           genre: Science Fiction
+        

@@ -21,6 +21,9 @@ parameters:
         director :
           type: string
           description : The name of the movie director
+        genre:
+          type: string
+          description : The genre of the movie
           
 responses:
   200:
@@ -32,3 +35,4 @@ responses:
           title: 2001 A Space Odyssey
           director: Stanley Kubrick
           date: 1968
+          genre: Science Fiction

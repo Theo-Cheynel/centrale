@@ -8,8 +8,12 @@ class UserRepository:
 
     @staticmethod
     def getbykey(key):
-        """ Query a user by last and first name """
+        """ Query a user by key """
         return User.query.filter_by(key=key).one()
+
+    def get_by_name(first_name, last_name):
+        """ Query a user by last and first name """
+        return User.query.filter_by(first_name=first_name, last_name=last_name)
 
     def update(self, key, last_name, first_name, age):
         """ Update a user's age """
