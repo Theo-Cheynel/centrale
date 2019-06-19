@@ -12,7 +12,7 @@ class Rate(db.Model, BaseModel, metaclass=MetaBaseModel):
 
     user_rating = db.Column(db.Integer, primary_key=True)
     movie_rated = db.Column(db.Integer, primary_key=True)
-    rating = db.Column(db.Float, nullable=True)
+    rating = db.Column(db.Integer, nullable=True)
 
     def __init__(self, user_rating, movie_rated, rating=None):
         """ Create a new Rate """
