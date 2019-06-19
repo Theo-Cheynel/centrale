@@ -7,11 +7,11 @@ class UserRepository:
     """ The repository for the user model """
 
     @staticmethod
-    def get(last_name, first_name):
+    def getbykey(key):
         """ Query a user by last and first name """
-        return User.query.filter_by(last_name=last_name, first_name=first_name).one()
+        return User.query.filter_by(key=key).one()
 
-    def update(self, last_name, first_name, age):
+    def update(self, key, last_name, first_name, age):
         """ Update a user's age """
         user = self.get(last_name, first_name)
         user.age = age
@@ -19,8 +19,8 @@ class UserRepository:
         return user.save()
 
     @staticmethod
-    def create(last_name, first_name, age):
+    def create(key, last_name, first_name, age):
         """ Create a new user """
-        user = User(last_name=last_name, first_name=first_name, age=age)
+        user = User(key=key, last_name=last_name, first_name=first_name, age=age)
 
         return user.save()

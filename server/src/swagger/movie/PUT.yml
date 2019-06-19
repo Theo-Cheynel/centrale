@@ -3,14 +3,10 @@ Update a movie based on the sent information
 tags:
   - movie
 parameters:
-  - name: title
-    in: path
-    type: string
-    description: the title of the movie
-  - name: director
-    in: path
-    type: string
-    description: the name of the director of the movie
+  - name : key
+    in : path
+    type : integer
+    description : the key identifier of the movie
   - name: body
     in: body
     schema:
@@ -19,6 +15,12 @@ parameters:
         date:
           type: integer
           description: The date of the movie
+        title:
+          type: string
+          description : The title of the movie
+        director :
+          type: string
+          description : The name of the movie director
 
 responses:
   200:

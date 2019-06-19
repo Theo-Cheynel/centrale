@@ -16,30 +16,34 @@ class MovieResource(Resource):
 
     @staticmethod
     @swag_from("../swagger/movie/GET.yml")
-    def get(title, director):
+    def get(key):
         """ Return a movie key information based on its title """
-        movie = MovieRepository.get(title = title, director=director)
+        movie = MovieRepository.getbykey(key=key)
         return jsonify({"movie": movie.json})
 
     @staticmethod
     @parse_params(
-        Argument("date", location="json", required=True, help="The date of the movie.")
+        Argument("date", location="json", required=True, help="The date of the movie."),
+        Argument("title", location="json", required=True, help="The title of the movie."),
+        Argument("director", location="json", required=True, help="The name of the movie director.")
     )
     @swag_from("../swagger/movie/POST.yml")
-    def post(title, director, date):
+    def post(key, title, director, date):
         """ Create a movie based on the sent information """
         movie = MovieRepository.create(
-            title = title, director = director, date = date
+            key = key, title = title, director = director, date = date
         )
         return jsonify({"movie": movie.json})
 
     @staticmethod
     @parse_params(
-        Argument("date", location="json", required=True, help="The date of the movie.")
+        Argument("date", location="json", required=True, help="The date of the movie."),
+        Argument("title", location="json", required=True, help="The title of the movie."),
+        Argument("director", location="json", required=True, help="The name of the movie director.")
     )
     @swag_from("../swagger/movie/PUT.yml")
-    def put(title, director, date):
+    def put(key, title, director, date):
         """ Update a movie based on the sent information """
         repository = MovieRepository()
-        movie = repository.update(title = title, director = director, date=date)
+        movie = repository.update(key = key, title = title, director = director, date=date)
         return jsonify({"movie": movie.json})
