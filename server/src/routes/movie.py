@@ -4,7 +4,7 @@ Defines the blueprint for the movies
 from flask import Blueprint
 from flask_restful import Api
 
-from resources import MovieResource, AllMoviesResource, MovieResourceByTitle, MovieRatingResource
+from resources import MovieResource, AllMoviesResource, MovieResourceByTitle, MovieRatingResource, MovieGenreResource
 
 MOVIE_BLUEPRINT = Blueprint("movie", __name__)
 Api(MOVIE_BLUEPRINT).add_resource(
@@ -18,4 +18,7 @@ Api(MOVIE_BLUEPRINT).add_resource(
 )
 Api(MOVIE_BLUEPRINT).add_resource(
     MovieRatingResource, "/movie_rating/<int:key>"
+)
+Api(MOVIE_BLUEPRINT).add_resource(
+    MovieGenreResource, "/genre/<string:genre>"
 )
