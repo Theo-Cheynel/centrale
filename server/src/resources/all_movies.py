@@ -21,3 +21,9 @@ class AllMoviesResource(Resource):
         movies = MovieRepository.get_all()
         return [movie.json for movie in movies]
 
+    @staticmethod
+    @swag_from("../swagger/movie/LOAD_DB.yml")
+    def post():
+        """ Post the full database """
+        movies = MovieRepository.post_all_db()
+        return jsonify({"data":"The database was loaded correctfully"})
