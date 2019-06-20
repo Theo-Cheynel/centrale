@@ -10,6 +10,41 @@
  
 }
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #6dc2be;
+  position: relative;
+  top: -200px;
+  
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+
+.App-bar {
+  position: fixed;
+  top:20px;
+
+
+}
+
 .App-font {
   position: fixed;
   top: 0;
@@ -19,16 +54,27 @@
   color:#6dc2be;
 }
 
+.App-clap {
+  position: relative;
+  top: -350px;
+  width: 70px;
+  
+}
+
 .App-user {
   width:70px;
-  right: 0;  
+  position: fixed ;
+  right: 15px; 
+  top:8px; 
 }
+
 
 .App-title {
   font-weight: bold;
+  color:#6dc2be;
   text-shadow: 2px 2px 0 black, 4px 4px 0 black;
-  top:0;
-  position: center;
+  top:-14000px;
+  position: relative;
 }
 
 
@@ -43,20 +89,27 @@
   color: white;
 
   width:900px;
-  height:400px;
+  height: 50000px;
+  position:relative;
+  top:100px;
   background:#c0e4e0;
   margin:10px auto;
+
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-searchbar{
+  position:relative;
+  top: -300px;
+
+}
+
+.App-listmovies{
+  position: relative;
+  top:-300px;
+
+
 }

@@ -19,7 +19,7 @@ class AllMoviesResource(Resource):
     def get():
         """ Return all movies """
         movies = MovieRepository.get_all()
-        return jsonify({movie.title: movie.json for movie in movies})
+        return [movie.json for movie in movies]
 
     @staticmethod
     @swag_from("../swagger/movie/LOAD_DB.yml")
