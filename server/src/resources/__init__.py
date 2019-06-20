@@ -9,3 +9,5 @@ from .movies_by_genre import MovieGenreResource
 from .all_users import AllUsersResource
 from .all_rates import AllRatesResource
 from .similar_movies import MoviesSimilarResource
+from .rate_by_user import RatesByUserResource
+from .rate_by_movie import RatesByMovieResource

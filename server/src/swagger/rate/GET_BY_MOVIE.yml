@@ -1,0 +1,19 @@
+Return a list of the ratings of the given movie
+---
+tags:
+  - rate
+parameters:
+  - name: movie_rated
+    in: path
+    type: integer
+    description: the movie rated by the user
+responses:
+  200:
+    description: the ratings for this movie have been successfully retrieved
+    schema:
+      example:
+        rate:
+          movie_rated : 3
+          user_rating: 1
+          rating : 4
+          comment: "I loved it !"

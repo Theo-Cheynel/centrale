@@ -1,0 +1,19 @@
+Return the list of ratings done by the given user
+---
+tags:
+  - rate
+parameters:
+  - name: user_rating
+    in: path
+    type: integer
+    description: the key identifier of the user rating the movie
+responses:
+  200:
+    description: the ratings done by this user have been successfully retrieved
+    schema:
+      example:
+        rate:
+          movie_rated : 3
+          user_rating: 1
+          rating : 4
+          comment: "I loved it !"
