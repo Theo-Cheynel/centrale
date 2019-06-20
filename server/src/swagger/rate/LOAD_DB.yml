@@ -1,0 +1,15 @@
+Loads the rate database
+---
+tags:
+  - rate
+responses:
+  200:
+    description: the rate database was successfully loaded
+    schema:
+      example:
+        rate:
+          movie_rated : 3
+          user_rating: 1
+          rating : 4
+          commentary: "I loved it !"
+

@@ -1,4 +1,4 @@
-Return an user key information based on his name
+Return a rating based on the given information
 ---
 tags:
   - rate

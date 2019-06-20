@@ -28,3 +28,14 @@ class UserRepository:
         user = User(key=key, last_name=last_name, first_name=first_name, age=age)
 
         return user.save()
+
+
+    @staticmethod
+    def get_all():
+        """ Get all users """
+        return User.query.all()
+
+
+    def load_db():
+        """ Load the full database """
+        return

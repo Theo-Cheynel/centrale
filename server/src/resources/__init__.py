@@ -6,3 +6,6 @@ from .user_by_name import UserResourceByName
 from .movies_by_title import MovieResourceByTitle
 from .movie_rating import MovieRatingResource
 from .movies_by_genre import MovieGenreResource
+from .all_users import AllUsersResource
+from .all_rates import AllRatesResource
+from .similar_movies import MoviesSimilarResource

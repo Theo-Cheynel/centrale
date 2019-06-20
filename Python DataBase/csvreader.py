@@ -1,5 +1,6 @@
 import csv
 
+"""
 with open('movies.csv', 'r') as csvfile:
     spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
     i = 0
@@ -30,12 +31,16 @@ with open('ratings.csv', 'r') as csvfile:
         a = int(row[0].split(',')[0])
         b = int(row[0].split(',')[1])
         rating = int(float(row[0].split(',')[2]))
-        if b<=1000:
+        if 10<=b<=1000:
             l.append({'user_rating':a, 'movie_rated':b, 'rating':rating})
         i+= 1
         if i == 100836:
             break
-            """
             
+f = open("demofile2.txt", "a")
+
 for i in l :
-    print("        create(key="+str(i['key'])+ ", title= '''"+i['title']+"''', director='', date=" +str(i['date'])+ ", genre='''"+i['genre']+  "''')")
+    f.write("        Rate(user_rating="+str(i['user_rating'])+ ", movie_rated= "+str(i['movie_rated'])+", rating=" +str(i['rating'])+ ").save()" + """
+""")
+
+f.close()

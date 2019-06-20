@@ -1,0 +1,20 @@
+Return a list of similar movies
+---
+tags:
+  - movie
+parameters:
+  - name: movie
+    in: path
+    type: integer
+    description: The key identifier of the movie
+responses:
+  200:
+    description: Some similar movies were found !
+    schema:
+      example:
+        movie:
+          key : 1
+          title: 2001 A Space Odyssey
+          director: Stanley Kubrick
+          date: 1968
+          genre: Science Fiction

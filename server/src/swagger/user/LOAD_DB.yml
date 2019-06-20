@@ -1,0 +1,14 @@
+Loads the database oon the sent information
+---
+tags:
+  - user
+responses:
+  200:
+    description: The database was successfully loaded
+    schema:
+      example:
+        user:
+          key : 1
+          last_name: Doe
+          first_name: John
+          age: 30
