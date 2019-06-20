@@ -39,8 +39,8 @@ li a:hover {
 }
 
 .App-bar {
-  position: relative;
-  top:-270px;
+  position: fixed;
+  top:20px;
 
 
 }
@@ -73,7 +73,7 @@ li a:hover {
   font-weight: bold;
   color:#6dc2be;
   text-shadow: 2px 2px 0 black, 4px 4px 0 black;
-  top:-440px;
+  top:-14000px;
   position: relative;
 }
 
@@ -89,7 +89,7 @@ li a:hover {
   color: white;
 
   width:900px;
-  height: 1000px;
+  height: 50000px;
   position:relative;
   top:100px;
   background:#c0e4e0;
@@ -107,3 +107,9 @@ li a:hover {
 
 }
 
+.App-listmovies{
+  position: relative;
+  top:-300px;
+
+
+}

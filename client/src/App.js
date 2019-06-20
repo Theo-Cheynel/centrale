@@ -58,7 +58,7 @@ function App() {
                 </form>
                 </div>
 
-           <p>
+           <p className= "App-listmovies">
 
            {movies && movies.map(m => (<div>{m.title} {m.genre} {m.date}</div>))  }
            </p>
